@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                mail bcc: '', body: 'Jenkins Test Mail 1', cc: '', from: '', replyTo: '', subject: 'Jenkins Test Mail 1', to: 'ramu.pamarthy@gmail.com'
+            }
+        }
+    }
+}
+
